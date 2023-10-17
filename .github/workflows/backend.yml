@@ -25,6 +25,7 @@ jobs:
       - run: npm run build
 
       - run: node dist/index.js & # &はバックグラウンドで起動しておくということ
+      - run: npx wait-on -t 10000 http://localhost:8080/api/health # 起動確認のパスにアクセス
       - run: npm run test:api
 
       - uses: actions/upload-artifact@v3
