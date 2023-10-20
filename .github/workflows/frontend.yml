@@ -12,4 +12,5 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - run: aws s3 sync . s3://udemy-github-actions-s3-yuu --exact-timestamps --region ap-northeast-1
