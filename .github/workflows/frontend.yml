@@ -1,0 +1,15 @@
+name: frontend
+
+on:
+  push:
+    branches:
+      - main
+defaults:
+  run:
+    working-directory: frontend
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: aws s3 sync . s3://udemy-github-actions-s3-yuu --exact-timestamps --region ap-northeast-1
