@@ -7,9 +7,9 @@ on:
     paths:
       - "backend/**"
       - ".github/**"
-  schedule:
-    # UTCで毎朝7時に実行 (日本時間で16時)
-    - cron: "0 7 * * *"
+  # schedule:
+  #   # UTCで毎朝7時に実行 (日本時間で16時)
+  #   - cron: "0 7 * * *"
 
 defaults:
   run:
